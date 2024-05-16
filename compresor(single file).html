@@ -17,7 +17,7 @@
   <script>
 let outputFile = null;
    
-    function() {
+    function caculate() {
       //var to store origenal code plus tags(AKA taged)
       let tagedJs = null; 
     let tagedCss = null;
@@ -33,8 +33,11 @@ let outputFile = null;
 	tagedHtml = html - "\</html\>"
   
       
-      outputFile = html + "\<style\><br>" + css +"\</style\><br>\<script\><br>" + js + ""
+      outputFile = html + "\<style\><br>" + css +"\</style\><br>\<script\><br>" + js + "\</script\><br>\</html\>"
     }    
+	  caculate()
+getElementById("output").innerhtml=(outputFile)
+	  
   </script>
   </body>
   <html>
