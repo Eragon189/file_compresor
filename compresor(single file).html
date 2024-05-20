@@ -26,14 +26,14 @@ let outputFile = null;
       let html = getElementById("html")
         let css = getElementById("css")
         let js = getElementById("js")
-			//aplyes tags to html,css, and javascript
-  tagedCss = "\<style\><br>" + css + "<br>\<style\>"
-  tagedJs = "\<script\><br>" + css + "<br>\<script\>"
+			//aplyes tags to css, and javascript
+  tagedCss = `\<style\><br>${css}<br>\<style\>`
+  tagedJs = `\<script\><br>${js}"<br>\<script\>`
 			//removes </html> tag
-	tagedHtml = html - "\</html\>"
+tagedHtml = html.slice(0, -5);
   
       
-      outputFile = html + "\<style\><br>" + css +"\</style\><br>\<script\><br>" + js + "\</script\><br>\</html\>"
+      outputFile = `${tagedHtml}<br>${tagedCss}<br>${tagedJs}<br>\<html\>`
     }    
 	  caculate()
 getElementById("output").innerhtml=(outputFile)
